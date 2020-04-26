@@ -1,0 +1,51 @@
+:root{
+    --header_font:  'Muli', sans-serif;
+    --text_font: 'Poppins', sans-serif;
+    --default_color: #014DA3;
+}
+
+h1,
+h2
+h3
+h4
+h5{
+    font-family: var(--header_font);
+}
+
+i,
+span,
+input,
+p,
+button,
+a{
+    font-family: var(--text_font); 
+}
+
+a,
+a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+.default_btn{
+  background-color: var(--default_color);
+  padding: 0.8em 2em;
+    border-radius: 30px;
+    color: #f5f5f5;
+}
+
+
+.intro__hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(https://images.pond5.com/man-talking-woman-office-footage-071988769_prevstill.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
