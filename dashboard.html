@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="libs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/themify-icons-font/themify-icons/themify-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@500&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <section class="board_area">
+        <aside id="aside">
+            <div class="side_nav">
+                <div class="side_nav_content">
+                    <button type="button" data-toggle="modal" data-target="#formModal" class="add_icon_holder">
+                        <i class="ti-plus add_icon"></i>
+                    </button>
+                    <div class="pt-2 ml-3">
+                        <h4>Add Expense</h4>
+                    </div>
+
+                </div>
+
+            </div>
+        </aside>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+                    <div class="form_holder">
+                        <form action="" method="post">
+                            <div class="form_element">
+                                <label for="" class="blue_text">Payment method</label>
+                                <select name="" id="">
+                                    <option value="">Card</option>
+                                    <option value="">Cash</option>
+                                    <option value="">Transfer</option>
+                                </select>
+                            </div>
+
+                            <div class="form_element mt-3">
+                                <label for="" class="blue_text">Amount</label>
+                                <input type="number" name="" id="" placeholder="Amount">
+                            </div>
+
+                            <div class="form_element mt-3">
+                                <label for="" class="blue_text">Date</label>
+                                <input type="date" name="" id="">
+                            </div>
+
+                            <div class="form_element mt-3">
+                                <label for="" class="blue_text">Description</label>
+                                <textarea name="" id="" cols="30" rows="5"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="default_btn" data-dismiss="modal">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main_section container">
+            <nav>
+                <div class="nav_item_holder">
+                    <i class="ti-menu-alt " id="openBtn"></i>
+                      <i class="ti-menu-alt " id="openBtn_alt" onclick="slideOut()"></i>
+                    <div class="profile_pic_holder">
+                        <img src="img/profile.jpg" class="w-100" id="profilePic" alt="">
+                    </div>
+                </div>
+            </nav>
+            <div class="welcome_text_holder">
+                <div class="welcome_text">
+                    <h1>Welcome <span id="username">Ogurinka</span>!</h1>
+                    <p>Start organising your expenses now!</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+<script src="libs/jquery/jquery.min.js"></script>
+<script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+<script src="src/app.js"></script>
+
+</html>
