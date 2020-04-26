@@ -1,14 +1,15 @@
-:root{
-    --header_font:  'Muli', sans-serif;
+:root {
+    --header_font: 'Muli', sans-serif;
     --text_font: 'Poppins', sans-serif;
     --default_color: #014DA3;
 }
 
+body {
+    position: relative;
+}
+
 h1,
-h2
-h3
-h4
-h5{
+h2 h3 h4 h5 {
     font-family: var(--header_font);
 }
 
@@ -17,22 +18,42 @@ span,
 input,
 p,
 button,
-a{
-    font-family: var(--text_font); 
+a {
+    font-family: var(--text_font);
 }
 
 a,
-a:hover{
+a:hover {
     text-decoration: none;
     color: inherit;
 }
 
-.default_btn{
-  background-color: var(--default_color);
-  padding: 0.8em 2em;
-    border-radius: 30px;
+.default_btn {
+    background-color: var(--default_color);
+    padding: 0.8em 2em;
+    border-radius: 5px;
     color: #f5f5f5;
+    border: none;
 }
+
+.success,
+.error {
+    color: white;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.success {
+    background: green;
+}
+
+.error {
+    background: red;
+}
+
 
 
 .intro__hero {
@@ -48,4 +69,203 @@ a:hover{
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffffff;
+}
+
+.blue_text {
+    color: var(--default_color);
+}
+
+
+
+/****Dashboard*****/
+.board_area {
+    background: url("/images/dashboard_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+aside {
+    width: 300px;
+    position: fixed;
+    transition: all 0.5s ease;
+}
+
+.side_nav {
+    min-height: 100vh;
+    position: fixed;
+    background-color: #fff;
+    z-index: 900;
+
+}
+
+.side_nav_content {
+    padding: 35px;
+    padding-bottom: 0;
+    display: flex;
+}
+
+.add_icon_holder {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: var(--default_color);
+    border: none;
+}
+
+.add_icon {
+    position: relative;
+    font-size: 20px;
+    color: #f5f5f5;
+    top: 2px;
+}
+
+.modal-content {
+    padding: 1.5em;
+}
+
+.form_element input,
+.form_element select,
+.form_element textarea {
+    width: 100%;
+    border: none;
+    border: 2px solid var(--default_color);
+    outline: none;
+    padding: 0.6em;
+    border-radius: 5px;
+    background: #fff;
+}
+
+/***/
+.main_section {
+    padding-left: 300px;
+}
+
+.slide {
+    display: block;
+    width: 200px;
+    transition: all 0.5s ease;
+}
+
+.profile_pic_holder {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: block;
+    margin: 2rem auto;
+}
+
+#openBtn,
+#openBtn_alt {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+#openBtn_alt {
+    display: none;
+}
+
+.nav_item_holder {
+    display: flex;
+}
+
+.nav_item_holder i {
+    float: right
+}
+
+.welcome_text_holder {
+    display: flex;
+    align-items: center;
+    min-height: 55vh;
+    width: 100%;
+}
+
+.welcome_text {
+    color: #fff;
+    padding: 0.6em;
+}
+
+.welcome_text h1 {
+    font-size: 50px;
+}
+
+.welcome_text p {
+    font-size: 20px;
+}
+
+
+
+@media screen and (max-width: 996px) {
+    .welcome_text {
+        padding-bottom: 2rem;
+        padding-left: 0;
+    }
+
+    .welcome_text h1 {
+        font-size: 26px;
+    }
+
+    .welcome_text p {
+        font-size: 14px;
+    }
+
+    aside {
+        display: none;
+        z-index: 10000;
+    }
+
+    .main_section {
+        padding-left: 15px;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    #openBtn {
+        display: none;
+    }
+
+    #openBtn_alt {
+        display: block
+    }
+}
+
+.expense-card {
+    background: #fff;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    min-height: 400px;
+    margin: 0 auto;
+}
+
+.expense-card div {
+    width: 100%;
+}
+
+.expense-card p {
+    font-size: 16px;
+    color: #1c1c1c;
+}
+
+.expense-card p span {
+    font-size: 14px;
+    color: #666;
+}
+
+.expense-card .delete {
+    color: #f00;
+    font-size: 16px;
+}
+
+#dashboard {
+    display: none;
 }

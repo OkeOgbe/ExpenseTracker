@@ -4,28 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Welcome | Login to begin</title>
+    <link rel="stylesheet" href="libs/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="libs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/signup.css">
 </head>
 
 <body>
+    <section class="board_area" id="dashboard">
+        <aside id="aside">
+            <div class="side_nav">
+                <div class="profile_pic_holder">
+                    <img src="" class="w-100" id="profilePic" alt="">
+                </div>
+                <div class="side_nav_content">
 
-    <section class="intro__hero">
-        <div class="section_padding col-md-6">
-            <h1>Manage your expenses better with
-                Expense Tracker</h1>
-            <p class="pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.</p>
-            <div class="search text-center pt-3">
-                <div class=" col-md-12">
-                    <a href="auth.html" class="default_btn">Get application </a>
+                    <button type="button" data-toggle="modal" data-target="#formModal" class="add_icon_holder">
+                        <i class="ti-plus add_icon"></i>
+                    </button>
+                    <div class="pt-2 ml-3">
+                        <h4>Add Expense</h4>
+                    </div>
+
+                </div>
+
+            </div>
+        </aside>
+
+        <!-- Modal -->
+        <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+                    <div class="form_holder">
+                        <div class="container">
+                            <form action="" id="expense-form">
+                                <div class="form_element">
+                                    <label for="" class="blue_text">Payment method</label>
+                                    <select name="" id="payment">
+                                        <option selected disabled>Choose one</option>
+                                        <option value="card">Card</option>
+                                        <option value="cash">Cash</option>
+                                        <option value="transfer">Transfer</option>
+                                    </select>
+                                </div>
+
+                                <div class="form_element mt-3">
+                                    <label for="" class="blue_text">Amount</label>
+                                    <input type="number" name="" id="amount" placeholder="Amount">
+                                </div>
+
+                                <div class="form_element mt-3">
+                                    <label for="" class="blue_text">Date</label>
+                                    <input type="date" name="" id="date">
+                                </div>
+
+                                <div class="form_element mt-3">
+                                    <label for="" class="blue_text">Description</label>
+                                    <textarea name="" id="desc" cols="30" rows="5"></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="default_btn">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
+
+        <div class="main_section container">
+            <nav>
+                <div class="nav_item_holder">
+                    <i class="ti-menu-alt " id="openBtn"></i>
+                    <i class="ti-menu-alt " id="openBtn_alt" onclick="slideOut()"></i>
+
+                </div>
+            </nav>
+            <div class="welcome_text_holder">
+                <div class="welcome_text">
+                    <h1>Hi <span id="username">Ogurinka</span>!</h1>
+                    <p>Start Tracking your expenses now!</p>
+                    <div id="expense-list" class="row"></div>
+                </div>
+
+            </div>
+        </div>
+
     </section>
 
+    <div class="card bg-light Main" id="index">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h3 class="text-center p-2">Sign in with Google to use app</h3>
+
+            <form class="SignUp">
+                <a href="javascript:void(0)" class="btn btn-lg btn-twitter authUser"><i class="fab fa-google icon"></i>Click to Sign in</a>
+            </form>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="src/app.js"></script>
 </body>
 
 </html>
