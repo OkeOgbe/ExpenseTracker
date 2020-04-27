@@ -1,12 +1,5 @@
 const firebaseConfig = {
-	apiKey: "AIzaSyBDcx9iewWysFUEzVCHGxTSrvk7NABUqs0",
-	authDomain: "expense-tracker-8c7a5.firebaseapp.com",
-	databaseURL: "https://expense-tracker-8c7a5.firebaseio.com",
-	projectId: "expense-tracker-8c7a5",
-	storageBucket: "expense-tracker-8c7a5.appspot.com",
-	messagingSenderId: "1037024490612",
-	appId: "1:1037024490612:web:232708ad464b8027a7cd21",
-	measurementId: "G-J11BC2NLKJ"
+	//use ur own api key
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
